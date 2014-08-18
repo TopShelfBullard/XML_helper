@@ -12,9 +12,9 @@ module XmlHelper
       end
 
       def parent_data(path, parent)
-        title = "In file [#{path}]:\nFrom parent element:\n"
+        title = "In file [#{path}]:\nFrom parent element:\n".yellow
         body ="#{parent}\n"
-        "#{title.yellow}#{body}\n"
+        "#{title}#{body}\n"
       end
 
       def intro(node_one, node_two)
