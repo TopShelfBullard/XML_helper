@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby​
+require_relative '../lib/xml_helper/runner'
+
+runner = XmlHelper::Runner.new(ARGV)
+runner.run
