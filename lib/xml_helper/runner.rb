@@ -21,8 +21,9 @@ module XmlHelper
     end
 
     def run_xml_difference_finder
-        differences = XmlHelper::Differences.new(@file_path_one, @file_path_two)
-        differences.differences.each do |diffs|
+        xml_differences = XmlHelper::Differences.new(@file_path_one, @file_path_two)
+        differences = xml_differences.get_hash_array_of_differences
+        differences.each do |diffs|
           XmlHelper::Output.output_differences(diffs)
         end
     end
